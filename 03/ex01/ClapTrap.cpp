@@ -12,22 +12,18 @@
 
 #include "ClapTrap.h"
 
-ClapTrap::ClapTrap(void)
+ClapTrap::ClapTrap(void) : hit_points(10), energy_points(10), attack_damage(0), name("a ClapTrap")
 {
-    hit_points = 10;
-    energy_points = 10;
-    attack_damage = 0;
-    name = "a ClapTrap";
     std::cout << "ClapTrap " << name << " created" << std::endl;
 }
 
-ClapTrap::ClapTrap(std::string name)
+ClapTrap::ClapTrap(std::string name) : hit_points(10), energy_points(10), attack_damage(0), name("a ClapTrap")
 {
-    hit_points = 10;
-    energy_points = 10;
-    attack_damage = 0;
-    this->name = name;
     std::cout << "ClapTrap " << name << " created" << std::endl;
+}
+
+ClapTrap::ClapTrap(const ClapTrap& clap) : hit_points(clap.hit_points), energy_points(clap.energy_points), attack_damage(clap.attack_damage), name(clap.name)
+{
 }
 
 ClapTrap::~ClapTrap(void)
@@ -38,7 +34,7 @@ ClapTrap::~ClapTrap(void)
 void ClapTrap::attack(const std::string& name)
 {
     std::cout << "ClapTrap " << this->name << " attacks " << name << ", causing " 
-              << attack_damage << " points of damage !" << std::endl;
+              << attack_damage << " points of damage!" << std::endl;
     --energy_points;
 }
 

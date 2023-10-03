@@ -6,37 +6,24 @@
 /*   By: noa <noa@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/22 01:55:41 by noa               #+#    #+#             */
-/*   Updated: 2023/06/22 21:33:17 by noa              ###   ########.fr       */
+/*   Updated: 2023/06/22 02:52:55 by noa              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ClapTrap.h"
 
-ClapTrap::ClapTrap(void)
+ClapTrap::ClapTrap(void) : hit_points(10), energy_points(10), attack_damage(0), name("a ClapTrap")
 {
-    hit_points = 10;
-    energy_points = 10;
-    attack_damage = 0;
-    name = "a ClapTrap";
     std::cout << "ClapTrap " << name << " created" << std::endl;
 }
 
-ClapTrap::ClapTrap(std::string name)
+ClapTrap::ClapTrap(std::string name) : hit_points(10), energy_points(10), attack_damage(0), name("a ClapTrap")
 {
-    hit_points = 10;
-    energy_points = 10;
-    attack_damage = 0;
-    this->name = name;
     std::cout << "ClapTrap " << name << " created" << std::endl;
 }
 
-ClapTrap::ClapTrap(const ClapTrap& trap)
+ClapTrap::ClapTrap(const ClapTrap& clap) : hit_points(clap.hit_points), energy_points(clap.energy_points), attack_damage(clap.attack_damage), name(clap.name)
 {
-    name = trap.name;
-    energy_points = trap.energy_points;
-    hit_points = trap.hit_points;
-    attack_damage = trap.attack_damage;
-    std::cout << "ClapTrap " << name << " created" << std::endl;
 }
 
 ClapTrap::~ClapTrap(void)
@@ -47,7 +34,7 @@ ClapTrap::~ClapTrap(void)
 void ClapTrap::attack(const std::string& name)
 {
     std::cout << "ClapTrap " << this->name << " attacks " << name << ", causing " 
-              << attack_damage << " points of damage !" << std::endl;
+              << attack_damage << " points of damage!" << std::endl;
     --energy_points;
 }
 
