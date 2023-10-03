@@ -17,7 +17,7 @@
 # include <string>
 # include "ClapTrap.h"
 
-class ScavTrap : public ClapTrap
+class ScavTrap : virtual public ClapTrap
 {
     private:
     bool gate_keeper;

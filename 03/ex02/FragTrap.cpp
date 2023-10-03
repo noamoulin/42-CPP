@@ -15,8 +15,8 @@
 FragTrap::FragTrap(void)
 {
     hit_points = 100;
-    energy_points = 50;
-    attack_damage = 20;
+    energy_points = 100;
+    attack_damage = 30;
     name = "a FragTrap";
     std::cout << "FragTrap " << name << " created" << std::endl;
 }
@@ -24,15 +24,15 @@ FragTrap::FragTrap(void)
 FragTrap::FragTrap(const std::string& name)
 {
     hit_points = 100;
-    energy_points = 50;
-    attack_damage = 20;
+    energy_points = 100;
+    attack_damage = 30;
     this->name = name;
     std::cout << "FragTrap " << name << " created" << std::endl;
 }
 
 FragTrap::FragTrap(const FragTrap& trap) : ClapTrap(trap)
 {
-    std::cout << "FragTrap " << name << " created" << std::endl;
+    std::cout << "FragTrap " << trap.name << " copied" << std::endl;
 }
 
 

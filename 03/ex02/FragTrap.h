@@ -15,10 +15,8 @@
 
 # include "ClapTrap.h"
 
-class FragTrap : public ClapTrap
+class FragTrap : virtual public ClapTrap
 {
-    private:
-
     public:
     FragTrap(void);
     FragTrap(const FragTrap&);

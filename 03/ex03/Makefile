@@ -15,7 +15,7 @@ OBJS = $(addsuffix .o, $(SRCS))
 
 CXX = c++
 CXXFLAGS = -Wall -Wextra -Werror -std=c++98
-NAME = ++war
+NAME = diamond
 
 %.o : %.cpp
 	$(CXX) -c $(CXXFLAGS) $< -o $@
