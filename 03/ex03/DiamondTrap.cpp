@@ -16,17 +16,17 @@
 DiamondTrap::DiamondTrap() : ClapTrap("a_DiamondTrap_clap_name"), ScavTrap(), FragTrap(), name("a_DiamondTrap")
 {
 	std::cout << "DiamondTrap " << name << " created" << std::endl;
-	/*this->FragTrap::hit_points = 100;
+	this->FragTrap::hit_points = 100;
 	this->FragTrap::attack_damage = 30;
-	this->ScavTrap::energy_points = 50;*/
+	this->ScavTrap::energy_points = 50;
 }
 
 DiamondTrap::DiamondTrap(std::string name) : ClapTrap(name + "_clap_name"), ScavTrap(), FragTrap(), name(name)
 {
 	std::cout << "DiamondTrap " << name << " created" << std::endl;
-	/*this->FragTrap::hit_points = 100;
+	this->FragTrap::hit_points = 100;
 	this->FragTrap::attack_damage = 30;
-	this->ScavTrap::energy_points = 50;*/
+	this->ScavTrap::energy_points = 50;
 }
 
 DiamondTrap::DiamondTrap(const DiamondTrap& trap) : ClapTrap(trap), ScavTrap(), FragTrap()
