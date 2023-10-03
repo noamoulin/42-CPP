@@ -6,7 +6,7 @@
 /*   By: noa <noa@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/31 13:55:19 by noa               #+#    #+#             */
-/*   Updated: 2023/09/28 02:21:01 by noa              ###   ########.fr       */
+/*   Updated: 2023/10/01 06:13:10 by noa              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -128,7 +128,7 @@ Fixed Fixed::operator/(const Fixed& fixed)
 {
 	Fixed ret;
 
-	ret.setRawBits((this->bits * (1 << fractionnal_bits)) / fixed.bits);
+	ret.setRawBits(this->bits / fixed.toFloat());
 	return ret;
 }
 

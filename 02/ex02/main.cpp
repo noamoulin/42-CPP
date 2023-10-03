@@ -6,7 +6,7 @@
 /*   By: noa <noa@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/31 21:30:52 by noa               #+#    #+#             */
-/*   Updated: 2023/09/28 02:24:20 by noa              ###   ########.fr       */
+/*   Updated: 2023/10/01 06:09:18 by noa              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 #include "Fixed.hpp"
 
 int main(void)
-{
+{/*
     Fixed a;
 	Fixed b(5.05f);
 	Fixed c(2);
@@ -36,7 +36,12 @@ int main(void)
 	std::cout << "c / b = " << Fixed(c / b) << std::endl;
 
 	std::cout << "max(b, c) = " << Fixed::max(b, c) << std::endl;
-	std::cout << "min(b, c) = " << Fixed::min(b, c) << std::endl;
+	std::cout << "min(b, c) = " << Fixed::min(b, c) << std::endl;*/
+
+	Fixed a = 5;
+	Fixed b = 2;
+
+	std::cout << a / b;
 
     return 0;
 }

@@ -13,15 +13,15 @@
 SRCS = ClapTrap main
 OBJS = $(addsuffix .o, $(SRCS))
 
-CC = c++
-CFLAGS = -Wall -Wextra -Werror -std=c++98
+CXX = c++
+CXXFLAGS = -Wall -Wextra -Werror -std=c++98
 NAME = war
 
-%.o : srcs/%.cpp
-	$(CC) -c $(CFLAGS) $< -o $@
+%.o : %.cpp
+	$(CXX) -c $(CXXFLAGS) $< -o $@
 
 $(NAME) : $(OBJS)
-	$(CC) $(CFLAGS) $(OBJS) -o $(NAME)
+	$(CXX) $(CXXFLAGS) $(OBJS) -o $(NAME)
 
 all : $(NAME)
 

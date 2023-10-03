@@ -15,6 +15,7 @@
 
 ScavTrap::ScavTrap(void)
 {
+    gate_keeper = false;
     hit_points = 100;
     energy_points = 50;
     attack_damage = 20;
@@ -24,6 +25,7 @@ ScavTrap::ScavTrap(void)
 
 ScavTrap::ScavTrap(std::string name)
 {
+    gate_keeper = false;
     hit_points = 100;
     energy_points = 50;
     attack_damage = 20;
@@ -31,12 +33,8 @@ ScavTrap::ScavTrap(std::string name)
     std::cout << "ScavTrap " << name << " created" << std::endl;
 }
 
-ScavTrap::ScavTrap(const ScavTrap& trap)
+ScavTrap::ScavTrap(const ScavTrap& trap) : ClapTrap(trap)
 {
-    name = trap.name;
-    energy_points = trap.energy_points;
-    hit_points = trap.hit_points;
-    attack_damage = trap.attack_damage;
     std::cout << "ScavTrap " << name << " created" << std::endl;
 }
 
@@ -62,9 +60,6 @@ void ScavTrap::guardGate(void)
 
 ScavTrap& ScavTrap::operator=(const ScavTrap& clap)
 {
-    name = clap.name;
-    hit_points = clap.hit_points;
-    energy_points = clap.energy_points;
-    attack_damage = clap.attack_damage;
+    ClapTrap::operator=(clap);
     return *this;
 }

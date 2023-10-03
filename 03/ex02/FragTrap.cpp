@@ -30,12 +30,8 @@ FragTrap::FragTrap(const std::string& name)
     std::cout << "FragTrap " << name << " created" << std::endl;
 }
 
-FragTrap::FragTrap(const FragTrap& trap)
+FragTrap::FragTrap(const FragTrap& trap) : ClapTrap(trap)
 {
-    name = trap.name;
-    energy_points = trap.energy_points;
-    hit_points = trap.hit_points;
-    attack_damage = trap.attack_damage;
     std::cout << "FragTrap " << name << " created" << std::endl;
 }
 
@@ -47,14 +43,11 @@ FragTrap::~FragTrap(void)
 
 void FragTrap::highFivesGuys(void)
 {
-    std::cout << name << " : high fives guys !" << std::endl;
+    std::cout << "FragTrap " << name << " : high fives guys !" << std::endl;
 }
 
 FragTrap& FragTrap::operator=(const FragTrap& clap)
 {
-    name = clap.name;
-    hit_points = clap.hit_points;
-    energy_points = clap.energy_points;
-    attack_damage = clap.attack_damage;
+    ClapTrap::operator=(clap);
     return *this;
 }

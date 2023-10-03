@@ -6,7 +6,7 @@
 /*   By: noa <noa@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/22 02:57:01 by noa               #+#    #+#             */
-/*   Updated: 2023/06/22 03:52:39 by noa              ###   ########.fr       */
+/*   Updated: 2023/06/22 22:20:59 by noa              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 ScavTrap::ScavTrap(void)
 {
+    gate_keeper = false;
     hit_points = 100;
     energy_points = 50;
     attack_damage = 20;
@@ -24,12 +25,19 @@ ScavTrap::ScavTrap(void)
 
 ScavTrap::ScavTrap(std::string name)
 {
+    gate_keeper = false;
     hit_points = 100;
     energy_points = 50;
     attack_damage = 20;
     this->name = name;
     std::cout << "ScavTrap " << name << " created" << std::endl;
 }
+
+ScavTrap::ScavTrap(const ScavTrap& trap) : ClapTrap(trap)
+{
+    std::cout << "ScavTrap " << name << " created" << std::endl;
+}
+
 
 ScavTrap::~ScavTrap(void)
 {
@@ -48,4 +56,10 @@ void ScavTrap::guardGate(void)
     gate_keeper = true;
     std::cout << "ScavTrap " << name << " entered in gate keeper mode"
               << std::endl;
+}
+
+ScavTrap& ScavTrap::operator=(const ScavTrap& clap)
+{
+    ClapTrap::operator=(clap);
+    return *this;
 }
