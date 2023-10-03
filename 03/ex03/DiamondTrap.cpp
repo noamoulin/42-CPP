@@ -13,7 +13,7 @@
 #include "DiamondTrap.h"
 #include <iostream>
 
-DiamondTrap::DiamondTrap() : ClapTrap("a_DiamondTrap_clap_name"), ScavTrap(), FragTrap(), name("a_DiamondTrap")
+DiamondTrap::DiamondTrap() : ClapTrap("a_DiamondTrap_clap_name"), ScavTrap(name), FragTrap(name), name("a_DiamondTrap")
 {
 	std::cout << "DiamondTrap " << name << " created" << std::endl;
 	this->FragTrap::hit_points = 100;
@@ -21,7 +21,7 @@ DiamondTrap::DiamondTrap() : ClapTrap("a_DiamondTrap_clap_name"), ScavTrap(), Fr
 	this->ScavTrap::energy_points = 50;
 }
 
-DiamondTrap::DiamondTrap(std::string name) : ClapTrap(name + "_clap_name"), ScavTrap(), FragTrap(), name(name)
+DiamondTrap::DiamondTrap(std::string name) : ClapTrap(name + "_clap_name"), ScavTrap(name), FragTrap(name), name(name)
 {
 	std::cout << "DiamondTrap " << name << " created" << std::endl;
 	this->FragTrap::hit_points = 100;
@@ -29,8 +29,9 @@ DiamondTrap::DiamondTrap(std::string name) : ClapTrap(name + "_clap_name"), Scav
 	this->ScavTrap::energy_points = 50;
 }
 
-DiamondTrap::DiamondTrap(const DiamondTrap& trap) : ClapTrap(trap), ScavTrap(), FragTrap()
+DiamondTrap::DiamondTrap(const DiamondTrap& trap) : ClapTrap(trap), ScavTrap(trap), FragTrap(trap), name(trap.name)
 {
+	ClapTrap::name = trap.name + "_clap_name";
 	std::cout << "DiamondTrap " << trap.name << " copied" << std::endl;
 }
 

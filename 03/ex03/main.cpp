@@ -21,6 +21,7 @@ int main()
     DiamondTrap test(trap3);
 
     test.highFivesGuys();
+    test.whoAmI();
 
     trap0.attack("Phillip");
     trap1.takeDamage(0);
