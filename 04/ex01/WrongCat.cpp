@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   WrongCat.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: noa <noa@student.42.fr>                    +#+  +:+       +#+        */
+/*   By: nomoulin <nomoulin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/29 03:23:14 by noa               #+#    #+#             */
-/*   Updated: 2023/09/29 03:27:49 by noa              ###   ########.fr       */
+/*   Updated: 2023/10/09 11:54:00 by nomoulin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,13 +23,13 @@ WrongCat::~WrongCat()
 	std::cout << "A wrong cat was destroyed\n";
 }
 
-WrongCat::WrongCat(WrongCat& wcat)
+WrongCat::WrongCat(const WrongCat& wcat)
 {
 	this->type = wcat.getType();
 	std::cout << "A wrong cat was copied\n";
 }
 
-WrongCat & WrongCat::operator=(WrongCat const& wcat)
+WrongCat & WrongCat::operator=(const WrongCat& wcat)
 {
 	this->type = wcat.type;
 	return *this;

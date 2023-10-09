@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: noa <noa@student.42.fr>                    +#+  +:+       +#+        */
+/*   By: nomoulin <nomoulin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/29 03:11:25 by noa               #+#    #+#             */
-/*   Updated: 2023/09/29 04:56:30 by noa              ###   ########.fr       */
+/*   Updated: 2023/10/09 12:09:49 by nomoulin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,9 @@
 
 int main()
 {
-	const Animal* animal = new Animal();
-	const Animal* dog = new Dog();
-	const Animal* cat = new Cat();
+	const Animal* animal = new Animal; // PROTEGER
+	const Animal* dog = new Dog;
+	const Animal* cat = new Cat;
 
 	std::cout << std::endl;
 	std::cout << "Dog->getType : " << dog->getType() << std::endl;

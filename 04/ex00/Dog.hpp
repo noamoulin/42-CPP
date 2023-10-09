@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Dog.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: noa <noa@student.42.fr>                    +#+  +:+       +#+        */
+/*   By: nomoulin <nomoulin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/29 02:29:42 by noa               #+#    #+#             */
-/*   Updated: 2023/09/29 03:10:02 by noa              ###   ########.fr       */
+/*   Updated: 2023/10/09 12:00:03 by nomoulin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,8 +23,8 @@ class Dog: public Animal
 	public:
     Dog();
     ~Dog();
-    Dog(Dog & dog);
-    Dog& operator=(Dog const& dog);
+    Dog(const Dog& dog);
+    Dog& operator=(const Dog& dog);
     void makeSound() const;
     std::string getType() const;
 };

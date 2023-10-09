@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Cat.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: noa <noa@student.42.fr>                    +#+  +:+       +#+        */
+/*   By: nomoulin <nomoulin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/29 02:53:31 by noa               #+#    #+#             */
-/*   Updated: 2023/09/29 04:48:42 by noa              ###   ########.fr       */
+/*   Updated: 2023/10/09 11:48:05 by nomoulin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ Cat::Cat()
 	if (!(this->brain = new Brain))
 	{
 		std::cerr << "Fatal error : Brain allocation failed\n";
-		exit(1);
+		exit(EXIT_FAILURE);
 	}
 	std::cout << "A cat was created\n";
 }
@@ -30,14 +30,14 @@ Cat::~Cat()
 	std::cout << "A cat was destroyed\n";
 }
 
-Cat::Cat(Cat& cat)
+Cat::Cat(const Cat& cat)
 {
 	this->type = cat.getType();
-	*this->brain = cat.getBrain();
+	*(this->brain) = cat.getBrain();
 	std::cout << "A cat was copied\n";
 }
 
-Cat& Cat::operator=(Cat const& cat)
+Cat& Cat::operator=(const Cat& cat)
 {
 	this->type = cat.type;
 	*this->brain = cat.getBrain();
@@ -56,5 +56,5 @@ std::string Cat::getType() const
 
 Brain Cat::getBrain(void) const
 {
-	return *this->brain;
+	return *(this->brain);
 }

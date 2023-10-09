@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   WrongCat.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: noa <noa@student.42.fr>                    +#+  +:+       +#+        */
+/*   By: nomoulin <nomoulin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/29 02:37:42 by noa               #+#    #+#             */
-/*   Updated: 2023/09/29 03:09:52 by noa              ###   ########.fr       */
+/*   Updated: 2023/10/09 11:53:19 by nomoulin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,8 +23,8 @@ class WrongCat: public WrongAnimal
 	public:
 		WrongCat();
 		~WrongCat();
-		WrongCat(WrongCat & wcat);
-		WrongCat& operator=(WrongCat const& wcat);
+		WrongCat(const WrongCat& wcat);
+		WrongCat& operator=(const WrongCat& wcat);
 		void makeSound() const;
 };
 

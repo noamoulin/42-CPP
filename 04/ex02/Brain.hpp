@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Brain.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: noa <noa@student.42.fr>                    +#+  +:+       +#+        */
+/*   By: nomoulin <nomoulin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/29 03:50:13 by noa               #+#    #+#             */
-/*   Updated: 2023/09/29 04:29:03 by noa              ###   ########.fr       */
+/*   Updated: 2023/10/09 11:50:59 by nomoulin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,13 +21,14 @@ class Brain
 {
 	private:
     std::string	ideas[IDEAS_NUMBER];
+
 	public:
     Brain();
     ~Brain();
-    Brain(Brain& brain);
-    Brain& operator=(Brain const& brain);
+    Brain(const Brain& brain);
+    Brain& operator=(const Brain& brain);
     std::string getIdea(int index) const;
-    void setIdea(int index, std::string idea);
+    void setIdea(int index, const std::string idea);
 };
 
 #endif

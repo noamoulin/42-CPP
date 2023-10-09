@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Animal.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: noa <noa@student.42.fr>                    +#+  +:+       +#+        */
+/*   By: nomoulin <nomoulin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/29 02:46:37 by noa               #+#    #+#             */
-/*   Updated: 2023/09/29 06:47:39 by noa              ###   ########.fr       */
+/*   Updated: 2023/10/09 12:05:43 by nomoulin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,13 +23,13 @@ Animal::~Animal()
 	std::cout << "An animal was destroyed\n";
 }
 
-Animal::Animal(Animal& animal)
+Animal::Animal(const Animal& animal)
 {
 	this->type = animal.type;
 	std::cout << "An animal was copied\n";
 }
 
-Animal& Animal::operator=(Animal const& animal)
+Animal& Animal::operator=(const Animal& animal)
 {
 	this->type = animal.type;
 	return *this;

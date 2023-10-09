@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Dog.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: noa <noa@student.42.fr>                    +#+  +:+       +#+        */
+/*   By: nomoulin <nomoulin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/29 02:59:38 by noa               #+#    #+#             */
-/*   Updated: 2023/09/29 05:33:21 by noa              ###   ########.fr       */
+/*   Updated: 2023/10/09 11:49:06 by nomoulin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,17 +30,17 @@ Dog::~Dog()
 	std::cout << "A dog was destroyed\n";
 }
 
-Dog::Dog(Dog& dog)
+Dog::Dog(const Dog& dog)
 {
 	this->type = dog.getType();
 	*this->brain = dog.getBrain();
 	std::cout << "A dog was copied\n";
 }
 
-Dog & Dog::operator=(Dog const& dog)
+Dog & Dog::operator=(const Dog& dog)
 {
 	this->type = dog.type;
-	*this->brain = dog.getBrain();
+	*(this->brain) = dog.getBrain();
 	return *this;
 }
 
@@ -56,10 +56,10 @@ std::string Dog::getType() const
 
 Brain Dog::getBrain(void) const
 {
-	return *this->brain;
+	return *(this->brain);
 }
 
-void Dog::brainWash(std::string new_idea)
+void Dog::brainWash(const std::string new_idea)
 {
 	for (int i = 0; i < IDEAS_NUMBER; i++)
 		this->brain->setIdea(i, new_idea);

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Cat.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: noa <noa@student.42.fr>                    +#+  +:+       +#+        */
+/*   By: nomoulin <nomoulin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/29 02:53:31 by noa               #+#    #+#             */
-/*   Updated: 2023/09/29 03:07:42 by noa              ###   ########.fr       */
+/*   Updated: 2023/10/09 12:00:32 by nomoulin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,13 +23,13 @@ Cat::~Cat()
 	std::cout << "A cat was destroyed\n";
 }
 
-Cat::Cat(Cat& cat)
+Cat::Cat(const Cat& cat)
 {
 	this->type = cat.getType();
 	std::cout << "A cat was copied\n";
 }
 
-Cat & Cat::operator=(Cat const& cat)
+Cat& Cat::operator=(const Cat& cat)
 {
 	this->type = cat.type;
 	return *this;

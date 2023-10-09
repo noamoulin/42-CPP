@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   WrongAnimal.cpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: noa <noa@student.42.fr>                    +#+  +:+       +#+        */
+/*   By: nomoulin <nomoulin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/29 03:20:24 by noa               #+#    #+#             */
-/*   Updated: 2023/09/29 03:31:42 by noa              ###   ########.fr       */
+/*   Updated: 2023/10/09 12:02:18 by nomoulin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,13 +23,13 @@ WrongAnimal::~WrongAnimal()
 	std::cout << "A wrong animal was destroyed\n";
 }
 
-WrongAnimal::WrongAnimal(WrongAnimal& wanimal)
+WrongAnimal::WrongAnimal(const WrongAnimal& wanimal)
 {
 	this->type = wanimal.type;
 	std::cout << "A wrong animal was copied\n";
 }
 
-WrongAnimal & WrongAnimal::operator=(WrongAnimal const& wanimal)
+WrongAnimal& WrongAnimal::operator=(const WrongAnimal& wanimal)
 {
 	this->type = wanimal.type;
 	return *this;

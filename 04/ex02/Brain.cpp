@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Brain.cpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: noa <noa@student.42.fr>                    +#+  +:+       +#+        */
+/*   By: nomoulin <nomoulin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/29 03:50:17 by noa               #+#    #+#             */
-/*   Updated: 2023/09/29 04:55:30 by noa              ###   ########.fr       */
+/*   Updated: 2023/10/09 11:51:26 by nomoulin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,14 +24,14 @@ Brain::~Brain()
 	std::cout << "A brain was destroyed\n";
 }
 
-Brain::Brain(Brain& brain)
+Brain::Brain(const Brain& brain)
 {
     for (int i = 0; i < IDEAS_NUMBER; i++)
         this->setIdea(i, brain.getIdea(i));
     std::cout << "A brain was copied\n";
 }
 
-Brain& Brain::operator=(Brain const& brain)
+Brain& Brain::operator=(const Brain& brain)
 {
     for (int i = 0; i < IDEAS_NUMBER; i++)
         this->setIdea(i, brain.getIdea(i));
@@ -45,7 +45,7 @@ std::string Brain::getIdea(int index) const
     return this->ideas[index];
 }
 
-void Brain::setIdea(int index, std::string idea)
+void Brain::setIdea(int index, const std::string idea)
 {
     if (index >= IDEAS_NUMBER) index = IDEAS_NUMBER - 1;
     else if (index < 0) index = 0;

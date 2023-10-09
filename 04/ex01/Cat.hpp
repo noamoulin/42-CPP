@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Cat.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: noa <noa@student.42.fr>                    +#+  +:+       +#+        */
+/*   By: nomoulin <nomoulin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/29 02:28:45 by noa               #+#    #+#             */
-/*   Updated: 2023/09/29 05:31:21 by noa              ###   ########.fr       */
+/*   Updated: 2023/10/09 11:46:08 by nomoulin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,8 +25,8 @@ class Cat: public Animal
 	public:
     Cat();
     ~Cat();
-    Cat(Cat & dog);
-    Cat& operator=(Cat const & cat);
+    Cat(const Cat& cat);
+    Cat& operator=(const Cat& cat);
     void makeSound() const;
     std::string getType() const;
     Brain getBrain(void) const;
