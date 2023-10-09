@@ -3,17 +3,17 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: noa <noa@student.42.fr>                    +#+  +:+       +#+         #
+#    By: nomoulin <nomoulin@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/09/29 03:13:15 by noa               #+#    #+#              #
-#    Updated: 2023/09/29 04:26:44 by noa              ###   ########.fr        #
+#    Updated: 2023/10/09 11:07:00 by nomoulin         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 SRCS = main Animal Cat Dog WrongAnimal WrongCat Brain
 OBJS = $(addsuffix .o, $(SRCS))
 
-CXX = clang++
+CXX = c++
 CXXFLAGS = -Wall -Wextra -Werror -std=c++98
 NAME = animals
 
