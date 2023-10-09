@@ -25,6 +25,7 @@ static void show_ideas(Dog& dog)
 
 int main()
 {
+	//Animal test;
 	Animal *animals[10];
 
 	for (int i = 0; i < 10; i++)
@@ -55,7 +56,7 @@ int main()
 
 	std::cout << "\n\n";
 
-	chien1.brainWash("Je vais ouvrir le PCT2");
+	chien1.brainWash("Tant pis je meurs");
 
 	std::cout << "\n\n";
 

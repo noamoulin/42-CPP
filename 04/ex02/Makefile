@@ -13,15 +13,15 @@
 SRCS = main Animal Cat Dog WrongAnimal WrongCat Brain
 OBJS = $(addsuffix .o, $(SRCS))
 
-CXX = c++
-CFLAGS = -Wall -Wextra -Werror -std=c++98
+CXX = clang++
+CXXFLAGS = -Wall -Wextra -Werror -std=c++98
 NAME = animals
 
-%.o : srcs/%.cpp
-	$(CXX) -c $(CFLAGS) $< -o $@
+%.o : %.cpp
+	$(CXX) -c $(CXXFLAGS) $< -o $@
 
 $(NAME) : $(OBJS)
-	$(CXX) $(CFLAGS) $(OBJS) -o $(NAME)
+	$(CXX) $(CXXFLAGS) $(OBJS) -o $(NAME)
 
 all : $(NAME)
 

@@ -11,6 +11,7 @@
 /* ************************************************************************** */
 
 #include "Cat.hpp"
+#include <cstdlib>
 
 Cat::Cat()
 {
@@ -18,7 +19,7 @@ Cat::Cat()
 	if (!(this->brain = new Brain))
 	{
 		std::cerr << "Fatal error : Brain allocation failed\n";
-		exit(EXIT_FAILURE);
+		exit(1);
 	}
 	std::cout << "A cat was created\n";
 }

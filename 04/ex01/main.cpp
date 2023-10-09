@@ -55,7 +55,7 @@ int main()
 
 	std::cout << "\n\n";
 
-	chien1.brainWash("Je vais ouvrir le PCT2");
+	chien1.brainWash("Tant pis je meurs");
 
 	std::cout << "\n\n";
 
