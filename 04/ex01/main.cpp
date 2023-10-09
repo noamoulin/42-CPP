@@ -6,7 +6,7 @@
 /*   By: nomoulin <nomoulin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/29 03:11:25 by noa               #+#    #+#             */
-/*   Updated: 2023/10/09 12:09:20 by nomoulin         ###   ########.fr       */
+/*   Updated: 2023/10/09 13:41:58 by nomoulin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ int main()
 {
 	Animal *animals[10];
 
-	for (int i = 0; i < 10; i++) // A PROTEGER
+	for (int i = 0; i < 10; i++)
 	{
 		if (i < 4) animals[i] = new Cat;
 		else animals[i] = new Dog;
@@ -38,7 +38,7 @@ int main()
 
 	std::cout << "\n\n";
 
-	Dog	* chien0 = new Dog; //PROTEGER
+	Dog	* chien0 = new Dog;
 	Dog	* chien1 = new Dog;
 
 	std::cout << "\n\n";

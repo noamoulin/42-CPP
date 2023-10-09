@@ -6,7 +6,7 @@
 /*   By: nomoulin <nomoulin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/29 03:11:25 by noa               #+#    #+#             */
-/*   Updated: 2023/10/09 12:09:49 by nomoulin         ###   ########.fr       */
+/*   Updated: 2023/10/09 13:41:44 by nomoulin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 
 int main()
 {
-	const Animal* animal = new Animal; // PROTEGER
+	const Animal* animal = new Animal;
 	const Animal* dog = new Dog;
 	const Animal* cat = new Cat;
 
