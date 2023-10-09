@@ -6,17 +6,17 @@
 /*   By: nomoulin <nomoulin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/29 02:29:42 by noa               #+#    #+#             */
-/*   Updated: 2023/10/09 11:46:34 by nomoulin         ###   ########.fr       */
+/*   Updated: 2023/10/09 13:54:05 by nomoulin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef DOG_HPP
 # define DOG_HPP
 
-# include "Animal.hpp"
+# include "AAnimal.hpp"
 # include "Brain.hpp"
 
-class Dog: public Animal
+class Dog: public AAnimal
 {
 	private:
 	std::string	type;

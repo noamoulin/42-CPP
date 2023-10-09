@@ -6,13 +6,13 @@
 /*   By: nomoulin <nomoulin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/29 03:11:25 by noa               #+#    #+#             */
-/*   Updated: 2023/10/09 13:42:57 by nomoulin         ###   ########.fr       */
+/*   Updated: 2023/10/09 13:54:05 by nomoulin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Cat.hpp"
 #include "Dog.hpp"
-#include "Animal.hpp"
+#include "AAnimal.hpp"
 
 static void show_ideas(Dog& dog)
 {
@@ -25,17 +25,17 @@ static void show_ideas(Dog& dog)
 
 int main()
 {
-	//Animal test;
-	Animal *animals[10];
+	//AAnimal test;
+	AAnimal *AAnimals[10];
 
 	for (int i = 0; i < 10; i++)
 	{
-		if (i < 4) animals[i] = new Cat;
-		else animals[i] = new Dog;
+		if (i < 4) AAnimals[i] = new Cat;
+		else AAnimals[i] = new Dog;
 	}
 
 	for (int i = 0; i < 10; i++)
-		delete animals[i];
+		delete AAnimals[i];
 
 	std::cout << "\n\n";
 

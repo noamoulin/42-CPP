@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Animal.hpp                                         :+:      :+:    :+:   */
+/*   AAnimal.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nomoulin <nomoulin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -10,21 +10,21 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ANIMAL_HPP
-# define ANIMAL_HPP
+#ifndef AAnimal_HPP
+# define AAnimal_HPP
 
 # include <iostream>
 
-class Animal
+class AAnimal
 {
 	protected:
     std::string	type;
 
 	public:
-    Animal();
-    virtual ~Animal();
-    Animal(const Animal& animal);
-    Animal& operator=(const Animal& animal);
+    AAnimal();
+    virtual ~AAnimal();
+    AAnimal(const AAnimal& AAnimal);
+    AAnimal& operator=(const AAnimal& AAnimal);
 
     virtual std::string getType() const;
     virtual void makeSound() const = 0;

@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Animal.cpp                                         :+:      :+:    :+:   */
+/*   AAnimal.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nomoulin <nomoulin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -10,32 +10,32 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Animal.hpp"
+#include "AAnimal.hpp"
 
-Animal::Animal()
+AAnimal::AAnimal()
 {
-	std::cout << "An animal was created\n";
-	this->type = "Animal";
+	std::cout << "An AAnimal was created\n";
+	this->type = "AAnimal";
 }
 
-Animal::~Animal()
+AAnimal::~AAnimal()
 {
-	std::cout << "An animal was destroyed\n";
+	std::cout << "An AAnimal was destroyed\n";
 }
 
-Animal::Animal(const Animal& animal)
+AAnimal::AAnimal(const AAnimal& AAnimal)
 {
-	this->type = animal.type;
-	std::cout << "An animal was copied\n";
+	this->type = AAnimal.type;
+	std::cout << "An AAnimal was copied\n";
 }
 
-Animal& Animal::operator=(const Animal& animal)
+AAnimal& AAnimal::operator=(const AAnimal& AAnimal)
 {
-	this->type = animal.type;
+	this->type = AAnimal.type;
 	return *this;
 }
 
-std::string Animal::getType() const
+std::string AAnimal::getType() const
 {
 	return this->type;
 }
